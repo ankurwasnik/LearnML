@@ -1,15 +1,30 @@
 '''
+Author:Ankur Wasnik
+Third Year Student (current year 2020-21) Computer Engineering
 
+The following code is all about the learning about THE PERCEPTRON MODEL FOR CLASSIFYING IRIS DATASET. In this , I have used Perceptron model to classify only Iris-setosa data.But, you can simply use it to classify more classes.
+ 
 '''
 import pandas as pd
 import numpy as np
-from sklearn import datasets
 class Perceptron (object):
+	'''
+	Perceptron classifier
+
+	Attributes:
+	1.learning_rate 
+	2.epochs
+	3.random_state
+
+	
+	'''
 	def __init__(self,learning_rate=0.01,epochs=10,random_state=1):
 		self.lr=learning_rate
 		self.epochs = epochs
 		self.random_state = random_state
+	
 	def fit(self,X,y):
+	''' fit method is ued to train The Perceptron model  '''
 		rgen=np.random.RandomState(self.random_state)
 		self.w_ = rgen.normal(loc=0.0,scale=0.01, size=1+X.shape[1])
 		self.errors_ = []
@@ -17,8 +32,8 @@ class Perceptron (object):
 			errors=0
 			for xi,target in zip(X,y):
 				update=self.lr*(target-self.predict(xi))
-				self.w_[0] += update
-				self.w_[1:] += update*xi
+				self.w_[0] += update #w_[0] is bias constant
+				self.w_[1:] += update*xi #w_[1:] are weights 	
 				errors += int(update!=0.0)
 			self.errors_.append(errors)
 		return self
