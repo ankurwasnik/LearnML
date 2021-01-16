@@ -1,0 +1,12 @@
+Find-S algorithm pseudocode
+
+1.Initialize h to the most specific hypothesis in H
+2.For each positivie training instance x :
+	2.1 For each attribute constraint a , in h
+		if the constraint a , is satisfied by x 
+			then do nothing
+		else 
+			replace a, in h by next more general constraint that is satisfied by x
+3.Output hypothesis h
+
+Note:Source :Machine Learning by Tom M.  Textbook
