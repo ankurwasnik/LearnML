@@ -1,0 +1,7 @@
+This text file is a guideline to follow to learn Machine Learning using Python.
+This is like the Index Page.This file will be updated as I post new on github 
+1.Setting up the System Windows or Linux
+2.Training Simple Machine Learning Algorithms for Classification
+3.Building good training dataset
+4 Compressing data via Dimensionality Reduction
+
