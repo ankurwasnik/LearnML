@@ -1,0 +1,14 @@
+Author: Ankur Wasnik
+Date	: Jan 23 2217
+
+Following are the steps for PRINCIPLE COMPONENT ANALYSIS
+
+1. Standarized the d-dimensional data
+2. Construct the covariance metrics
+3. Decompose the covariance matrix into its eigenvectors and eigenvalues
+4. Sort the eigenvalues by decreasing order to rank the corresponding eigenvectors
+5. Select the k eigenvectors, which correspond to the k-largest eigenvalues, where k is dimensionality of new feature subspace (k<=d)
+6. Construct a projection matrix, W , from the 'top' k eigenvectors
+7. Transform the d-dimensional input dataset,X using the projection matrix to obtain the new k-dimensional feature subspace.
+
+Courtesy : Sebastian Raschka 
